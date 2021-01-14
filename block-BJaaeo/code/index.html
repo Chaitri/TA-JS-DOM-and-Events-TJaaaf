@@ -11,7 +11,45 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>🤯 Calculator 🤩</h1>
+    <header class="header">
+      <h1>Calculator</h1>
+    </header>
+    <main class="main">
+      <div class="container calculator">
+        <div class="screen"></div>
+        <div class="operations">
+          <div class="add" data-value="+">+</div>
+          <div class="sub" data-value="-">-</div>
+          <div class="mul" data-value="*">*</div>
+          <div class="div" data-value="/">/</div>
+        </div>
+        <div class="numbers">
+          <div class="row">
+            <div class="num" data-value="7">7</div>
+            <div class="num" data-value="8">8</div>
+            <div class="num" data-value="9">9</div>
+          </div>
+          <div class="row">
+            <div class="num" data-value="4">4</div>
+            <div class="num" data-value="5">5</div>
+            <div class="num" data-value="6">6</div>
+          </div>
+          <div class="row">
+            <div class="num" data-value="1">1</div>
+            <div class="num" data-value="2">2</div>
+            <div class="num" data-value="3">3</div>
+          </div>
+          <div class="row">
+            <div class="num" data-value=".">.</div>
+            <div class="num" data-value="0">0</div>
+            <div class="num" data-value="C">C</div>
+          </div>
+        </div>
+        <div class="evaluate" data-value="calculate">
+          Calculate!
+        </div>
+      </div>
+    </main>
 
     <script src="./script.js"></script>
   </body>
