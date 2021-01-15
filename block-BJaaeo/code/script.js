@@ -1,7 +1,4 @@
 let screen = document.querySelector('.screen');
-let operations = document.querySelector('.operations');
-let numbers = document.querySelector('.numbers');
-let calculate = document.querySelector('.evaluate');
 
 let expression = '';
 let result;
@@ -22,14 +19,7 @@ function addToExpression(element) {
     }
 }
 
-numbers.addEventListener('click',  function(e) {
-    addToExpression(e.target);
-});
-
-operations.addEventListener('click', function(e) {
-    addToExpression(e.target);
-});
-
-calculate.addEventListener('click', function(e) {
+let calc = document.querySelector('.buttons')
+calc.addEventListener('click', function(e) {
     addToExpression(e.target);
 });
