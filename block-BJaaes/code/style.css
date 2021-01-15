@@ -1,0 +1,105 @@
+/* CSS Reset */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* CUSTOM STYLES */
+
+body {
+  background-color: pink;
+}
+
+.container {
+  max-width: 400px;
+  margin: 5rem auto;
+}
+
+.form-container {
+  background-color: white;
+  padding: 2rem;
+}
+
+.header {
+  background-color: rgb(161, 16, 89);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.form-control {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid  rgb(161, 16, 89);
+  background-color: pink;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color:  rgb(161, 16, 89);
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(250, 136, 155);
+}
+
+.form-control input {
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+}
+
+.form-control label {
+  text-transform: capitalize;
+}
+
+.success{
+  border: 1px solid green;
+  background-color: rgb(220, 253, 220);
+}
+
+.error {
+  border: 1px solid red;
+  background-color:rgb(255, 224, 224);
+}
