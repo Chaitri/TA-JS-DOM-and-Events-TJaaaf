@@ -3,9 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/7d51f361a6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper and Scissors</title>
   </head>
   <body>
+    <header class="header">
+      <h1>Rock Paper Scissors</h1>
+    </header>
+    <main class="container game">
+      <div class="choices">
+        <button data-choice="rock">
+          Rock
+          <i class="far fa-hand-rock"></i>
+        </button>
+        <button data-choice="paper">
+          Paper
+          <i class="far fa-hand-paper"></i>
+        </button>
+        <button data-choice="scissors">
+          Scissors
+          <i class="far fa-hand-scissors"></i>
+        </button>
+      </div>
+      <div class="score">
+        <div class="user-score">User: 0</div>
+        <div class="comp-score">Computer: 0</div>
+      </div>
+      <div class="result">
+        <div class="selected user-choice"></div>
+        <div class="vs">VS</div>
+        <div class="selected computer-choice"></div>
+      </div>
+      <div class="round-result"></div>
+      <button class="reset">Reset</button>
+    </main>
     <script src="./script.js"></script>
   </body>
 </html>
