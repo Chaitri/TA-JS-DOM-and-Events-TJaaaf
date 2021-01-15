@@ -91,3 +91,43 @@ input[type='text'] {
 .terms {
   display: inline-block;
 }
+
+/* MODAL */
+
+.modal {
+  background-color: linear-gradient(to right, #7f53ac 0, #657ced 100%);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 5rem;
+  display: none;
+}
+
+.text {
+  max-width: 400px;
+  height: 400px;
+  background-color: white;
+  margin: 2rem auto;
+}
+
+.text span {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text a {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  color: grey;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.content {
+  padding: 1rem 2rem;
+}
+
+.user-content {
+  font-size: 1.2rem;
+}
