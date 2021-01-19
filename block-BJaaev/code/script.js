@@ -1,7 +1,12 @@
 let rootElm = document.querySelector('.todos');
 let toDoInput = document.querySelector('.todo_input');
+let filterInput = document.querySelector('.filter');
+let all = document.getElementById('all');
+let active = document.getElementById('active');
+let completed = document.getElementById('completed');
+let clear = document.getElementById('clear');
 
-let allItems = [];
+let allItems = localStorage.getItem('allItems') ? JSON.parse(localStorage.getItem('allItems')) : [];
 
 function addToDo(event) {
     if(event.keyCode === 13 && event.target.value !== '') {
@@ -13,29 +18,30 @@ function addToDo(event) {
 
         event.target.value = '';
 
-        renderItems();
+        renderItems(allItems, rootElm);
 
+        localStorage.setItem('allItems', JSON.stringify(allItems));
     }
 }
 
 function removeItem(event) {
     let id = event.target.dataset.id;
     allItems.splice(id, 1);
-
-    renderItems();
+    localStorage.setItem('allItems', JSON.stringify(allItems));
+    renderItems(allItems, rootElm);
 }
 
 function changeItem(event) {
     let id = event.target.dataset.id;
     allItems[id].isDone = !allItems[id].isDone;
-
-    renderItems();
+    localStorage.setItem('allItems', JSON.stringify(allItems));
+    renderItems(allItems, rootElm);
 }
 
-function renderItems() {
+function renderItems(data, rootElm) {
     rootElm.innerHTML = '';
 
-    allItems.forEach( (item, index) => {
+    data.forEach( (item, index) => {
         let li = document.createElement('li');
         let div = document.createElement('div');
         let checkBox = document.createElement('input');
@@ -62,7 +68,35 @@ function renderItems() {
 
         rootElm.append(li);
 
-    })
+    });
+
+    filterInput.style.display = 'flex';
+}
+
+function showAll() {
+    renderItems(allItems, rootElm);
+}
+
+function showActive() {
+    let activeItems = [];
+    activeItems = allItems.filter( item => !item.isDone);
+    renderItems(activeItems, rootElm);
+}
+
+function showCompleted() {
+    let completedItems = [];
+    completedItems = allItems.filter( item => item.isDone);
+    renderItems(completedItems, rootElm);
+}
+
+function clearCompleted() {
+    allItems = allItems.filter(item => !item.isDone);
+    localStorage.setItem('allItems', JSON.stringify(allItems));
+    renderItems(allItems, rootElm);
 }
 
 toDoInput.addEventListener('keyup', addToDo);
+all.addEventListener('click', showAll);
+active.addEventListener('click', showActive);
+completed.addEventListener('click', showCompleted);
+clear.addEventListener('click', clearCompleted);
