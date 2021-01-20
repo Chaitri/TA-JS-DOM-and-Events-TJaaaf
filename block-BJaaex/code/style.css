@@ -1,0 +1,137 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* CUSTOM */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(250, 203, 219);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* MAIN GAME */
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    position: relative;
+    transition: all 0.4s linear;
+    transform-style: preserve-3d;
+}
+
+.card i {
+    color: black;
+    font-size: 4rem;
+}
+
+.front {
+    background-color: rgb(255, 190, 27);
+    width: 190px;
+    height: 150px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back {
+    width: 190px;
+    height: 150px;
+    position: absolute;
+    backface-visibility: hidden;
+
+    transform: rotateY(180deg);
+
+}
+
+.selected {
+    transform: rotateY(180deg);
+}
+
+.match i {
+    color: rgb(119, 18, 65);
+}
+
+.match .front {
+    background-color: transparent ;
+}
+
+.game_scores {
+    margin: 2rem 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
