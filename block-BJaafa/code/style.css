@@ -1,0 +1,179 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* CUSTOM STYLES */
+/* GENERIC */
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    line-height: 1.5;
+    background-color: black;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* HEADER */
+
+.header {
+    font-size: 3rem;
+    text-align: center;
+    color: #61892F;
+    padding-top: 3rem;
+    font-weight: 900;
+}
+
+/* MAIN */
+
+.card {
+    margin-top: 5rem;
+    background-color: black;
+    padding: 3rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2rem;
+    position: relative;
+    box-shadow: 0px 0px 20px #88C232;
+}
+
+.card img {
+    margin-right: 3rem;
+    max-width: 140px;
+}
+
+.heading {
+    color: rgb(202, 202, 202);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-align: justify;
+}
+
+.tag {
+    position: absolute;
+    top: -1rem;
+    left: 3rem;
+    background-color: #88C232;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    color: black;
+}
+
+.source {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 2rem;
+    color: #FF652F;
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.source:hover {
+    text-decoration: underline #FF652F;
+}
+
+.btn {
+    display: inline-block;
+    background-color: black;
+    padding: 1rem 2rem;
+    width: 40%;
+    margin: 4rem 0 2rem 0;
+    color: #950740;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Mirza', cursive;
+    border: 3px solid #950740;
+    outline: none;
+}
+
+.btn:hover {
+    box-shadow: 1px 1px 20px #950740;
+}
+
+.search-text {
+    color: rgb(202, 202, 202);
+    font-family: 'Mirza', cursive;
+    font-size: 1.2rem;
+}
+
+.tags {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.tags p {
+    color: rgb(202, 202, 202);;
+    background-color: #190061;
+    width: 18%;
+    margin: 0.5rem 0.3rem;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+.tags p:hover {
+    text-decoration: underline whitesmoke;
+}
